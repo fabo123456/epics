@@ -158,6 +158,9 @@ class Epics::Client
   def XCT(document)
     upload(Epics::XCT, document)
   end
+  def XE2(document)
+    upload(Epics::XE2, document)
+  end
 
   def STA(from = nil, to = nil)
     download(Epics::STA, from, to)
@@ -173,6 +176,18 @@ class Epics::Client
 
   def C53(from, to)
     download_and_unzip(Epics::C53, from, to)
+  end
+def Z53(from, to)
+    download(Epics::Z53, from, to)
+  end
+def Z54(from, to)
+    download_and_unzip(Epics::Z54, from, to)
+  end
+def Z54O()
+    download_and_unzip(Epics::Z54O)
+  end
+def Z01()
+    download_and_unzip(Epics::Z01)
   end
 
   def C54(from, to)
